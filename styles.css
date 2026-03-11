@@ -164,13 +164,12 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
   
   /* 2. La configuración del fondo */
   /* El linear-gradient crea una capa oscura semitransparente sobre tu imagen */
-  background-image: linear-gradient(rgba(10, 46, 80, 0.6), rgba(0, 0, 0, 0.6)), url('img/Portada.png');
+  background-image: linear-gradient(rgba(48, 70, 90, 0.6), rgba(29, 28, 28, 0.6)), url('img/Portada.png');
   
   /* 3. Ajustes para que la imagen se vea bien */
   background-size: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
   background-position: center center; /* Centra la imagen */
   background-repeat: no-repeat;
-  
 }
 .hero::before {
   content: '';
