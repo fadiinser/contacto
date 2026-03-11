@@ -162,7 +162,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(rgba(10, 46, 80, 0.6), rgba(0, 0, 0, 0.6)), url("../img/Portada.png") center/cover no-repeat;
+  background: linear-gradient(rgba(10, 46, 80, 0.6), rgba(0, 0, 0, 0.6)), url('.img/Portada.png.') center/cover no-repeat;
   padding: 6rem 1.5rem 4rem;
 }
 
