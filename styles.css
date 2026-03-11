@@ -162,7 +162,14 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
   justify-content: center;
   text-align: center;
   position: relative;
-  background: var(--color-primary) url("../img/Portada.png") center/cover no-repeat;
+  
+  /* Aquí está la corrección: Separamos las propiedades */
+  background-color: var(--color-primary);
+  background-image: url("../img/Portada.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
   padding: 6rem 1.5rem 4rem;
 }
 .hero::before {
