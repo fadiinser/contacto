@@ -671,7 +671,7 @@ section[id] {
 
 /* Misión y Visión */
 .mission-vision {
-  background: #706f6f;
+  background: #8d8b8b;
 }
 
 .mission-vision .container {
@@ -681,7 +681,7 @@ section[id] {
 }
 
 .mission-vision .column {
-  background: #706f6f;
+  background: #8d8b8b;
   padding: 2rem;
   border-radius: 4px;
   border-left: 4px solid var(--color-secondary);
