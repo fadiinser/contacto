@@ -671,7 +671,7 @@ section[id] {
 
 /* Misión y Visión */
 .mission-vision {
-  background: #8d8b8b;
+  background: #b6b2b2;
 }
 
 .mission-vision .container {
@@ -681,7 +681,7 @@ section[id] {
 }
 
 .mission-vision .column {
-  background: #8d8b8b;
+  background: #b6b2b2;
   padding: 2rem;
   border-radius: 4px;
   border-left: 4px solid var(--color-secondary);
@@ -745,8 +745,7 @@ section[id] {
 
 /* Equipo */
 .team-section {
-  background: #8d8b8b;
-  background:   var(--color-light);
+  background: #b6b2b2;
 }
 
 .team-section .content-wrap {
