@@ -165,7 +165,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
   
   /* Aquí está la corrección: Separamos las propiedades */
   background-color: var(--color-primary);
-  background-image: url("../img/Portada.png");
+  background-image: url("../Portada.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
