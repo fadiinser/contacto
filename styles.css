@@ -745,7 +745,8 @@ section[id] {
 
 /* Equipo */
 .team-section {
-  background: var(--color-light);
+  background: #8d8b8b;
+  background:   var(--color-light);
 }
 
 .team-section .content-wrap {
