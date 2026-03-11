@@ -8,9 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <a href="https://wa.me/51929845017" class="whatsapp-float" aria-label="Abrir conversación de WhatsApp para cotizar" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo-link">        
@@ -29,9 +35,8 @@
   </header>
 
   <main>
-    <!-- 1. Hero Nosotros -->
     <section class="hero hero-about">
-      <div class="container">
+      <div class="container revelar">
         <h1>Forjando el Futuro de la Industria</h1>
         <p class="hero-subtitle">
           Conoce al equipo de expertos detrás de las soluciones en Fabricación, Diseño e Ingeniería que impulsan tu productividad.
@@ -39,65 +44,64 @@
       </div>
     </section>
 
-    <!-- 2. Nuestra Identidad -->
     <section class="section identity-section">
       <div class="container">
-        <div class="content-wrap">
+        <div class="content-wrap" style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
           
-          <div class="text-block">
+          <div class="text-block revelar" style="flex: 1; min-width: 300px;">
             <h2>Más que Ingeniería, Resultados Tangibles</h2>
             <p>En FADIINSER S.A.C. nacimos con una premisa clara: resolver los desafíos más complejos del sector industrial mediante un enfoque integral. Combinamos el rigor técnico del diseño y la ingeniería con la robustez de nuestra fabricación y la precisión de nuestros servicios de campo. Nuestro compromiso es garantizar que cada engranaje de tu operación funcione con la máxima eficiencia y seguridad.</p>
           </div>
-          <div class="visual-block">
-            <img src="img/somos.png" alt="Fabricación de tanques de mezcla">
+
+          <div class="visual-block revelar" style="flex: 1; min-width: 300px;">
+            <img src="img/somos.png" alt="Fabricación de tanques de mezcla" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 3. Misión y Visión -->
     <section class="section mission-vision">
-      <div class="container">
-        <div class="column">
+      <div class="container" style="display: flex; gap: 40px; flex-wrap: wrap;">
+        <div class="column revelar" style="flex: 1; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #F39C12;">
           <h3>Nuestra Misión</h3>
           <p>Proveer soluciones industriales integrales de la más alta calidad en fabricación, diseño, ingeniería y servicios, superando las expectativas técnicas de nuestros clientes y garantizando operaciones seguras, eficientes y rentables.</p>
         </div>
-        <div class="column">
+        <div class="column revelar" style="flex: 1; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #F39C12;">
           <h3>Nuestra Visión</h3>
           <p>Consolidarnos como la empresa líder y el socio estratégico preferido en el desarrollo de proyectos industriales a nivel nacional, reconocidos por nuestra innovación, excelencia operativa y el talento de nuestro equipo humano.</p>
         </div>
       </div>
     </section>
 
-    <!-- 4. Valores Corporativos -->
-    <section class="section">
+    <section class="section values-section">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title revelar">
           <h2>Los Pilares de Nuestro Trabajo</h2>
         </div>
         <div class="values-grid">
-          <div class="value-card">
+          <div class="value-card revelar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
             </svg>
             <h3>Excelencia Técnica</h3>
             <p>Cada cálculo, corte y soldadura se realiza bajo estrictos controles de calidad.</p>
           </div>
-          <div class="value-card">
+          <div class="value-card revelar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
             </svg>
             <h3>Seguridad Primero</h3>
             <p>Protegemos la integridad de nuestro personal y el de nuestros clientes en cada intervención.</p>
           </div>
-          <div class="value-card">
+          <div class="value-card revelar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
             </svg>
             <h3>Compromiso y Puntualidad</h3>
             <p>Entendemos que en la industria el tiempo es dinero. Cumplimos nuestros plazos.</p>
           </div>
-          <div class="value-card">
+          <div class="value-card revelar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
@@ -108,28 +112,26 @@
       </div>
     </section>
 
-    <!-- 5. El Equipo -->
     <section class="section team-section">
       <div class="container">
-        <div class="content-wrap">
+        <div class="content-wrap revelar">
           <h2>Talento Especializado a tu Disposición</h2>
           <p>La verdadera fuerza de FADIINSER S.A.C. reside en nuestro equipo humano. Contamos con ingenieros colegiados, diseñadores industriales, técnicos soldadores homologados y especialistas en mantenimiento, todos unidos por una cultura de mejora continua y pasión por la industria.</p>
         </div>
       </div>
     </section>
 
-    <!-- 6. CTA Cierre -->
     <section class="cta-strip">
-      <div class="container">
+      <div class="container revelar">
         <h2>¿Listo para elevar el estándar de tu proyecto?</h2>
         <p>Permítenos demostrarte por qué somos la elección correcta para tus necesidades industriales.</p>
-        <a href="index.html#contacto" class="btn">Contactar a un Especialista</a>
+        <a href="index.html#contacto" class="btn" style="background-color: white; color: #F39C12; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px; display: inline-block;">Contactar a un Especialista</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-grid">
+    <div class="container footer-grid">
       <div class="footer-brand">
         <img src="assets/logo.png" alt="FADIINSER S.A.C.">
         <p>FADIINSER S.A.C. - Fabricación, Diseño, Ingeniería y Servicios de alta calidad para la industria.</p>
@@ -149,10 +151,32 @@
         <p><a href="#">Privacidad</a></p>
         <p><a href="#">Términos</a></p>
       </div>
-      
+    </div>
     <div class="footer-bottom">
-      <p>© 2026 FADIINSER S.A.C. Todos los derechos reservados.</p>
+      <div class="container">
+        <p>© 2026 FADIINSER S.A.C. Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add('activo');
+            observador.unobserve(entrada.target);
+          }
+        });
+      }, {
+        threshold: 0.15
+      });
+
+      const elementos = document.querySelectorAll('.revelar');
+      elementos.forEach((el) => {
+        observador.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
