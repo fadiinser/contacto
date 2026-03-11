@@ -162,7 +162,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(rgba(10, 46, 80, 0.6), rgba(0, 0, 0, 0.6)), url("../img/Portada.png") center/cover no-repeat;
+  background: linear-gradient(rgba(10, 46, 80, 0.6), rgba(0, 0, 0, 0.6)), url("img/Portada.png") center/cover no-repeat;
   padding: 6rem 1.5rem 4rem;
 }
 
@@ -888,7 +888,7 @@ section[id] {
 .hero-about {
   /* PASO CLAVE: Usamos la imagen como FONDO de la sección completa */
   /* El linear-gradient aplica una capa azul oscuro transparente (0.7) para que el texto blanco resalte */
-  background: var(--color-primary) url("../img/hero-about.png") center/cover no-repeat;
+  background: var(--color-primary) url("img/hero-about.png") center/cover no-repeat;
   
   background-size: cover;       /* La imagen se estira para cubrir todo */
   background-position: center;   /* La imagen se centra */
