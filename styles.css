@@ -156,21 +156,21 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
 
 /* Hero Home */
 .hero {
-  min-height: 100vh;
+  min-height: 100vh; /* Hace que ocupe toda la pantalla */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  position: relative;
   
-  /* Aquí está la corrección: Separamos las propiedades */
-  background-color: var(--color-primary);
-  background-image: url("img/Portada.png");
-  background-size: cover;
-  background-position: center;
+  /* 2. La configuración del fondo */
+  /* El linear-gradient crea una capa oscura semitransparente sobre tu imagen */
+  background-image: linear-gradient(rgba(13, 40, 68, 0.8), rgba(13, 40, 68, 0.8)), url('img/Portada.png');
+  
+  /* 3. Ajustes para que la imagen se vea bien */
+  background-size: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
+  background-position: center center; /* Centra la imagen */
   background-repeat: no-repeat;
   
-  padding: 6rem 1.5rem 4rem;
 }
 .hero::before {
   content: '';
