@@ -671,7 +671,7 @@ section[id] {
 
 /* Misión y Visión */
 .mission-vision {
-  background: var(--color-light);
+  background: #D3D3D3  var(--color-light);
 }
 
 .mission-vision .container {
