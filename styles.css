@@ -598,7 +598,7 @@ section[id] {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(to bottom,rgba(10, 46, 80, 0.5), rgba(0, 0, 0, 0.7)), url('../img/proyecto-tanques-mezcla.png') center/cover no-repeat;
+  background: linear-gradient(to bottom,rgba(10, 46, 80, 0.5), rgba(0, 0, 0, 0.7)), url('.img/hero-about.png.') center/cover no-repeat;
   z-index: 1;
   padding: 7rem 1.5rem 4rem;
 }
