@@ -162,8 +162,14 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(rgba(10, 46, 80, 0.6), rgba(0, 0, 0, 0.6)), url('.img/Portada.png.') center/cover no-repeat;
+  background: var(--color-primary) url("../img/Portada.png") center/cover no-repeat;
   padding: 6rem 1.5rem 4rem;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10, 46, 80, 0.78) 0%, rgba(10, 46, 80, 0.6) 45%, rgba(10, 46, 80, 0.85) 100%);
 }
 
 .hero .container {
