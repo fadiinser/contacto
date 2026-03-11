@@ -164,7 +164,7 @@ h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
   
   /* 2. La configuración del fondo */
   /* El linear-gradient crea una capa oscura semitransparente sobre tu imagen */
-  background-image: linear-gradient(rgba(13, 40, 68, 0.8), rgba(13, 40, 68, 0.8)), url('img/Portada.png');
+  background-image: linear-gradient(rgba(10, 46, 80, 0.6), rgba(0, 0, 0, 0.6)), url('img/Portada.png');
   
   /* 3. Ajustes para que la imagen se vea bien */
   background-size: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
