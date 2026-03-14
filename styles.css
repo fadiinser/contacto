@@ -901,7 +901,7 @@ section[id] {
   /* PASO CLAVE: Usamos la imagen como FONDO de la sección completa */
   /* El linear-gradient aplica una capa azul oscuro transparente (0.7) para que el texto blanco resalte */
  /*background: linear-gradient(rgba(19, 29, 39, 0.7), rgba(24, 31, 37, 0.7)), url("../ background-image: linear-gradient(rgba(48, 70, 90, 0.6), rgba(29, 28, 28, 0.6)), url('img/Portada.png');") center/cover no-repeat;*/
-  background-image: linear-gradient(rgba(48, 70, 90, 0.6), rgba(29, 28, 28, 0.6)), url('WhatsApp Image 2022-10-11 at 11.43.55 AM.jpeg');
+  background-image: linear-gradient(rgba(48, 70, 90, 0.6), rgba(29, 28, 28, 0.6)), url('portada2.jpeg');
  
   
   background-size: cover;       /* La imagen se estira para cubrir todo */
