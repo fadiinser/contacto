@@ -1045,3 +1045,176 @@ section[id] {
   .projects-gallery .project-item:nth-child(1) { transition-delay: 0.1s; }
   .projects-gallery .project-item:nth-child(2) { transition-delay: 0.3s; }
   .projects-gallery .project-item:nth-child(3) { transition-delay: 0.5s; }
+
+
+  /* =========================================
+   PÁGINA CATÁLOGO DE SERVICIOS
+   ========================================= */
+.services-catalog {
+    background-color: #fcfbfa; /* Un fondo cálido muy claro, como en tu imagen */
+    padding-top: 6rem;
+}
+
+.catalog-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.catalog-subtitle {
+    color: var(--color-cta); /* Tu color #F39C12 */
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+/* Layout Principal de la Categoría */
+.category-block {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Izquierda 280px, Derecha el resto */
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.category-info .cat-icon {
+    background: #e8f0eb; /* Fondo suave para el icono */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.category-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.category-info p {
+    color: var(--color-neutral);
+    font-size: 0.95rem;
+}
+
+/* Grilla de Tarjetas a la derecha */
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de tarjetas */
+    gap: 2rem;
+}
+
+.catalog-card {
+    background: var(--color-white);
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.catalog-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.catalog-card p {
+    font-size: 0.9rem;
+    color: var(--color-neutral);
+    margin-bottom: 1.5rem;
+}
+
+/* Lista con checks */
+.check-list {
+    margin-bottom: 2rem;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.check-list li::before {
+    content: '✓'; /* Puedes cambiarlo por un icono SVG si prefieres */
+    position: absolute;
+    left: 0;
+    color: #5ab280; /* Color verde del check */
+    font-weight: bold;
+}
+
+/* Mini Galería dentro de la tarjeta */
+.card-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-main {
+    aspect-ratio: 1 / 1; /* Cuadrado perfecto */
+}
+
+.img-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+}
+
+.img-more {
+    position: relative;
+}
+
+.img-more .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.img-more .overlay span {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.img-more .overlay:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 992px) {
+    .category-block {
+        grid-template-columns: 1fr; /* Una sola columna en tablets/móviles */
+        gap: 2rem;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 3rem;
+    }
+    .category-info h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-cards {
+        grid-template-columns: 1fr; /* Tarjetas en una columna en celular */
+    }
+}
