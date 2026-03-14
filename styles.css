@@ -900,7 +900,7 @@ section[id] {
 .hero-about {
   /* PASO CLAVE: Usamos la imagen como FONDO de la sección completa */
   /* El linear-gradient aplica una capa azul oscuro transparente (0.7) para que el texto blanco resalte */
- background: linear-gradient(rgba(19, 29, 39, 0.7), rgba(24, 31, 37, 0.7)), url("WhatsApp Image 2022-10-11 at 11.43.55 AM.jpeg") center/cover no-repeat;
+ background: linear-gradient(rgba(19, 29, 39, 0.7), rgba(24, 31, 37, 0.7)), url("../WhatsApp Image 2022-10-11 at 11.43.55 AM.jpeg") center/cover no-repeat;
   
   background-size: cover;       /* La imagen se estira para cubrir todo */
   background-position: center;   /* La imagen se centra */
