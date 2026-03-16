@@ -303,30 +303,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const observador = new IntersectionObserver((entradas) => {
-        entradas.forEach((entrada) => {
-          if (entrada.isIntersecting) {
-            entrada.target.classList.add('activo');
-            observador.unobserve(entrada.target);
-          }
-        });
-      }, {
-        threshold: 0.15
-      });
-
-      const elementos = document.querySelectorAll('.revelar');
-      elementos.forEach((el) => {
-        observador.observe(el);
-      });
-    });
-  </script>
-
-  <div id="visorImagenes" class="modal-lightbox">
-    <span class="close-lightbox">&times;</span>
-    <img class="modal-lightbox-content" id="imgExpandida">
-  </div>
 
   <script>
     // Tu código de animación anterior (NO LO BORRES, déjalo aquí)
