@@ -1085,14 +1085,6 @@ section[id] {
     padding-bottom: 0;
 }
 
-/* Grilla de Tarjetas (DERECHA) -> VUELVE A 2 COLUMNAS */
-.category-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-    gap: 2rem;
-}
-
-
 .category-info .cat-icon {
     background: #e8f0eb; /* Fondo suave para el icono */
     width: 50px;
@@ -1114,147 +1106,45 @@ section[id] {
     font-size: 0.95rem;
 }
 
-/* Grilla de Tarjetas a la derecha */
+/* Grilla de Tarjetas (DERECHA) -> 2 COLUMNAS */
 .category-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de tarjetas */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
     gap: 2rem;
-}
-
-.catalog-card {
-    background: var(--color-white);
-    border: 1px solid #eaeaea;
-    border-radius: 4px;
-    padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-}
-
-.catalog-card h3 {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-}
-
-.catalog-card p {
-    font-size: 0.9rem;
-    color: var(--color-neutral);
-    margin-bottom: 1.5rem;
-}
-
-/* Lista con checks */
-.check-list {
-    margin-bottom: 2rem;
-}
-
-.check-list li {
-    position: relative;
-    padding-left: 24px;
-    font-size: 0.85rem;
-    color: #555;
-    margin-bottom: 0.5rem;
-}
-
-.check-list li::before {
-    content: '✓'; 
-    position: absolute;
-    left: 0;
-    color: #5ab280; /* Color verde del check */
-    font-weight: bold;
-}
-
-/* Mini Galería dentro de la tarjeta */
-.card-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.card-gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.img-main {
-    aspect-ratio: 1 / 1; /* Cuadrado perfecto */
-}
-
-.img-column {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 8px;
-}
-
-.img-more {
-    position: relative;
-}
-
-.img-more .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background var(--transition);
-}
-
-.img-more .overlay span {
-    font-size: 0.6rem;
-    letter-spacing: 1px;
-}
-
-.img-more .overlay:hover {
-    background: rgba(0,0,0,0.85);
+    align-items: stretch; /* Obliga a que las dos tarjetas tengan la misma altura */
 }
 
 /* =========================================
-   BOTÓN COTIZAR SERVICIO 
+   DISEÑO DE LAS TARJETAS (SOLUCIÓN DE SALTOS)
    ========================================= */
-.btn-premium {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    color: var(--color-primary);
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    transition: color var(--transition);
+.catalog-card {
+    background: var(--color-white);
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    
+    /* Para mantener todo alineado internamente */
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    
+    /* LA MAGIA: Esto hace que no salte de golpe, sino que flote suavemente */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.btn-premium i {
-    transition: transform 0.3s ease;
-}
-
-.btn-premium:hover {
-    color: var(--color-cta);
-}
-
-.btn-premium:hover i {
-    transform: translateX(5px); /* La flechita se mueve a la derecha */
-}
-
-/* LA MAGIA: EFECTO DE ELEVACIÓN AL PASAR EL MOUSE */
+/* EFECTO DE ELEVACIÓN AL PASAR EL MOUSE */
 .catalog-card:hover {
-    transform: translateY(-10px); /* Hace que la tarjeta suba 10px */
-    box-shadow: 0 15px 35px rgba(10, 46, 80, 0.12); /* Sombra más grande y profesional */
-    border-color: transparent; /* Quita el borde sutil para que resalte la sombra */
+    transform: translateY(-8px); /* Flota 8px hacia arriba suavemente */
+    box-shadow: 0 15px 35px rgba(10, 46, 80, 0.12); /* Sombra elegante */
+    border-color: transparent; 
 }
 
 .catalog-card h3 {
     font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--color-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .catalog-card p {
@@ -1266,9 +1156,117 @@ section[id] {
 /* Lista con checks */
 .check-list {
     margin-bottom: 2rem;
-    flex-grow: 1; /* Esto asegura que si una tarjeta tiene menos texto, el botón siga pegado abajo */
+    flex-grow: 1; /* Esto asegura que el botón "Cotizar" siempre quede pegado al fondo */
 }
 
+.check-list li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.6rem;
+}
+
+.check-list li::before {
+    content: '✓'; 
+    position: absolute;
+    left: 0;
+    color: #5ab280; /* Color verde del check */
+    font-weight: bold;
+}
+
+/* =========================================
+   LA MINI GALERÍA 
+   ========================================= */
+.card-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 8px; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Imagen principal a la izquierda */
+.card-gallery .img-main {
+    grid-column: 1; 
+    aspect-ratio: 1 / 1; /* Cuadrado perfecto */
+}
+
+/* Columna de imágenes a la derecha */
+.card-gallery .img-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Dos filas */
+    gap: 8px; 
+}
+
+.card-gallery .img-more {
+    position: relative; 
+}
+
+.card-gallery .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card-gallery .overlay span:last-child {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.card-gallery .overlay:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+/* =========================================
+   BOTÓN COTIZAR SERVICIO (ANIMACIÓN Y COLOR)
+   ========================================= */
+.btn-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--color-primary); /* Empieza azul oscuro */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    /* Transición suave para el color y el movimiento a la vez */
+    transition: all 0.3s ease; 
+}
+
+/* El efecto al pasar el mouse por encima */
+.btn-premium:hover {
+    color: var(--color-cta); /* Cambia al color naranja/ámbar */
+    transform: translateX(6px); /* Todo el botón se mueve sutilmente a la derecha */
+}
+
+/* La flechita sola */
+.btn-premium i {
+    transition: transform 0.3s ease;
+}
+
+/* La flechita da un pequeño estirón extra al pasar el mouse */
+.btn-premium:hover i {
+    transform: translateX(4px); 
+}
 
 /* =========================================
    RESPONSIVE PARA PANTALLAS PEQUEÑAS
@@ -1292,42 +1290,4 @@ section[id] {
     .category-cards {
         grid-template-columns: 1fr; /* Tarjetas en una columna en celular */
     }
-}
-
-
-/* =========================================
-   LA MINI GALERÍA (Para que no salgan gigantes)
-   ========================================= */
-.card-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    gap: 8px; /* Espacio entre fotos */
-    border-radius: 8px; 
-    overflow: hidden; 
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.card-gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Las recorta sin deformar */
-    display: block;
-}
-
-/* Imagen principal a la izquierda */
-.card-gallery .img-main {
-    grid-column: 1; 
-    aspect-ratio: 1 / 1; /* Cuadrado perfecto */
-}
-
-/* Columna de imágenes a la derecha */
-.card-gallery .img-column {
-    display: grid;
-    grid-template-rows: 1fr 1fr; /* Dos filas */
-    gap: 8px; 
-}
-
-.card-gallery .img-more {
-    position: relative; 
 }
