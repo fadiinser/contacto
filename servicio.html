@@ -322,5 +322,67 @@
       });
     });
   </script>
+
+  <div id="visorImagenes" class="modal-lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="modal-lightbox-content" id="imgExpandida">
+  </div>
+
+  <script>
+    // Tu código de animación anterior (NO LO BORRES, déjalo aquí)
+    document.addEventListener("DOMContentLoaded", function() {
+      const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add('activo');
+            observador.unobserve(entrada.target);
+          }
+        });
+      }, {
+        threshold: 0.15
+      });
+
+      const elementos = document.querySelectorAll('.revelar');
+      elementos.forEach((el) => {
+        observador.observe(el);
+      });
+
+      // ==========================================
+      // LÓGICA NUEVA: ABRIR FOTOS AL HACER CLIC
+      // ==========================================
+      const modal = document.getElementById("visorImagenes");
+      const imgModal = document.getElementById("imgExpandida");
+      const spanClose = document.getElementsByClassName("close-lightbox")[0];
+
+      // 1. Abrir imagen al hacer clic en cualquier foto de la galería
+      document.querySelectorAll('.card-gallery img').forEach(img => {
+        img.style.cursor = "pointer"; // Que salga la manito de clic
+        img.addEventListener('click', function() {
+          modal.style.display = "block";
+          imgModal.src = this.src;
+        });
+      });
+
+      // 2. Abrir la imagen que está debajo del cuadro oscuro "+ VER TODO"
+      document.querySelectorAll('.img-more .overlay').forEach(overlay => {
+        overlay.addEventListener('click', function() {
+          modal.style.display = "block";
+          imgModal.src = this.previousElementSibling.src; // Saca la foto que está atrás
+        });
+      });
+
+      // 3. Cerrar al hacer clic en la "X" naranja
+      spanClose.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // 4. Cerrar al hacer clic en el fondo azul oscuro
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    });
+  </script>
 </body>
 </html>
