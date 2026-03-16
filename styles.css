@@ -1050,7 +1050,7 @@ section[id] {
    PÁGINA CATÁLOGO DE SERVICIOS
    ========================================= */
 .services-catalog {
-    background-color: #fcfbfa; /* Un fondo cálido muy claro, como en tu imagen */
+    background-color: #fcfbfa; /* Un fondo cálido muy claro */
     padding-top: 6rem;
 }
 
@@ -1068,13 +1068,30 @@ section[id] {
     text-transform: uppercase;
 }
 
-/* Layout Principal de la Categoría */
+/* Layout Principal de la Categoría (Con borde separador) */
 .category-block {
     display: grid;
     grid-template-columns: 280px 1fr; /* Izquierda 280px, Derecha el resto */
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #eaeaea; /* Línea divisoria elegante */
 }
+
+/* Quita la línea divisoria del último bloque */
+.category-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Grilla de Tarjetas (DERECHA) -> VUELVE A 2 COLUMNAS */
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 2rem;
+}
+
 
 .category-info .cat-icon {
     background: #e8f0eb; /* Fondo suave para el icono */
@@ -1139,7 +1156,7 @@ section[id] {
 }
 
 .check-list li::before {
-    content: '✓'; /* Puedes cambiarlo por un icono SVG si prefieres */
+    content: '✓'; 
     position: absolute;
     left: 0;
     color: #5ab280; /* Color verde del check */
@@ -1199,7 +1216,63 @@ section[id] {
     background: rgba(0,0,0,0.85);
 }
 
-/* Responsive para pantallas pequeñas */
+/* =========================================
+   BOTÓN COTIZAR SERVICIO 
+   ========================================= */
+.btn-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: color var(--transition);
+}
+
+.btn-premium i {
+    transition: transform 0.3s ease;
+}
+
+.btn-premium:hover {
+    color: var(--color-cta);
+}
+
+.btn-premium:hover i {
+    transform: translateX(5px); /* La flechita se mueve a la derecha */
+}
+
+/* LA MAGIA: EFECTO DE ELEVACIÓN AL PASAR EL MOUSE */
+.catalog-card:hover {
+    transform: translateY(-10px); /* Hace que la tarjeta suba 10px */
+    box-shadow: 0 15px 35px rgba(10, 46, 80, 0.12); /* Sombra más grande y profesional */
+    border-color: transparent; /* Quita el borde sutil para que resalte la sombra */
+}
+
+.catalog-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.catalog-card p {
+    font-size: 0.95rem;
+    color: var(--color-neutral);
+    margin-bottom: 1.5rem;
+}
+
+/* Lista con checks */
+.check-list {
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Esto asegura que si una tarjeta tiene menos texto, el botón siga pegado abajo */
+}
+
+
+/* =========================================
+   RESPONSIVE PARA PANTALLAS PEQUEÑAS
+   ========================================= */
 @media (max-width: 992px) {
     .category-block {
         grid-template-columns: 1fr; /* Una sola columna en tablets/móviles */
@@ -1210,10 +1283,51 @@ section[id] {
     .category-info h2 {
         font-size: 1.5rem;
     }
+    .catalog-header h1 {
+        font-size: 2.2rem;
+    }
 }
 
 @media (max-width: 768px) {
     .category-cards {
         grid-template-columns: 1fr; /* Tarjetas en una columna en celular */
     }
+}
+
+
+/* =========================================
+   LA MINI GALERÍA (Para que no salgan gigantes)
+   ========================================= */
+.card-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 8px; /* Espacio entre fotos */
+    border-radius: 8px; 
+    overflow: hidden; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Las recorta sin deformar */
+    display: block;
+}
+
+/* Imagen principal a la izquierda */
+.card-gallery .img-main {
+    grid-column: 1; 
+    aspect-ratio: 1 / 1; /* Cuadrado perfecto */
+}
+
+/* Columna de imágenes a la derecha */
+.card-gallery .img-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Dos filas */
+    gap: 8px; 
+}
+
+.card-gallery .img-more {
+    position: relative; 
 }
